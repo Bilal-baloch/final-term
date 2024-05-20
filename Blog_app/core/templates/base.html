@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 border-b">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class='bg-gray-700'>
+    <nav class="px-6 py-3 flex  justify-between items-center w-full bg-gray-900 text-white">
+        <a href="/">BlogPosts</a>
+        <div class="space-x-6">
+            <a href='{%url 'addblog' %}'>Add Blog</a>
+            <a href="#">Authors</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+    <div >
+        {%block content%}
+        {%endblock%}
+    </div>
+</body>
+</html>

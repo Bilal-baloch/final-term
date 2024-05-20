@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+
+{%block content%}
+
+    <form action="." method="POST">
+        {% csrf_token %}
+        <div >
+            <label for="title">title</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <label for="content">Content</label>
+            <input type="text" name="content" id="content">
+        </div>
+        <div>
+            <label for="published_date">published Date</label>
+            <input type="date" name="published_date" id="published_date">
+        </div>
+        <div>
+            <label for="author">Author</label>
+            {{form.author}}
+        </div>
+        <button type='submit'>Add blog</button>
+    </form>
+
+{%endblock%}

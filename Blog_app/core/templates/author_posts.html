@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<h1>this is blogs</h1>
+        {%for post in author_posts %}
+          <p class='text-white'>{{post.title}}</p>
+        {%endfor%}
+
+
+{%endblock%}

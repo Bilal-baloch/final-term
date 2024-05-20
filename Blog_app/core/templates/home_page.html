@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+    {%if blogs%}
+   
+        {%for blog in blogs%}
+        <div class="px-6 py-3 flex  justify-between  bg-gray-900 text-white my-3">
+        <a href='{%url 'details' blog.id %}' class="text-2xl font-bold">Blog : {{blog.title}}</a>
+        <div class='space-x-6'>
+            <a href='{%url 'authorposts' blog.author %}' class='text-2xl font-bold'>author: <strong class='text-teal-500 underline'>{{blog.author}}</strong></a>
+        </div>
+    </div>
+        {%endfor%}
+   
+
+    
+    {%else%}
+        <p >No blogs Published yet</p>
+    {%endif%}
+</div>
+{%endblock%}
+
+{% comment %} <div class='px-4 py-3  grid grid-cols-4 gap-2  rounded-xl text-white'> {% endcomment %}
+    {% comment %} {%for blog in blogs%}
+
+    <a href='#' class='bg-gray-900 px-6 py-3 rounded-xl'>
+            <p>Title : {{blog.title}}</p>
+            <p>Published on :{{blog.publication_date}}</p>
+            <a href='#' class='block'>Authot : {{blog.author}}<>
+    </a>
+
+    {%endfor%} {% endcomment %}
